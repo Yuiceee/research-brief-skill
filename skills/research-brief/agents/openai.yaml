@@ -1,0 +1,4 @@
+interface:
+  display_name: "图文研究汇报"
+  short_description: "融合科研解释与合作方沟通，以摘要和证据图讲清项目进展与结论"
+  default_prompt: "请使用 $research-brief 读取项目材料，制作包含背景、工作、结果与结论的图文研究报告，交付离线 HTML 和可编辑正文。"

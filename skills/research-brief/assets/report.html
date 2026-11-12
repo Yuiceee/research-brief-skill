@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="@@LANG@@">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>@@TITLE@@</title>
+<style>
+:root{color-scheme:light;--ink:#243444;--muted:#5a6b79;--accent:#146c7a;--line:#dce5e9;--soft:#eff7f8}
+*{box-sizing:border-box}body{margin:0;background:#fff;color:var(--ink);font-family:system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;font-size:17px;line-height:1.85;overflow-wrap:anywhere}
+header,main,footer{max-width:980px;margin:auto;padding:20px 36px}header{padding-top:44px;padding-bottom:8px}h1{font-size:clamp(25px,3vw,36px);line-height:1.4;margin:14px 0}h2{font-size:25px;line-height:1.5;border-bottom:1px solid var(--line);padding-bottom:10px;margin:46px 0 18px}h3{font-size:20px;margin-top:30px}p{margin:16px 0}a{color:var(--accent);text-underline-offset:3px}a:hover{text-decoration-thickness:2px}.meta,figcaption,footer{font-size:14px;color:var(--muted)}.abstract{background:var(--soft);border-left:4px solid var(--accent);padding:18px 22px;line-height:1.9}details{border:1px solid var(--line);border-radius:8px;padding:14px 18px;margin:24px 0}summary{cursor:pointer;font-weight:650}nav ol{padding-left:24px}nav li{margin:5px 0}figure{margin:28px 0 36px}figure img{display:block;width:100%;height:auto}figcaption{margin-top:12px;line-height:1.8}.table-scroll{overflow-x:auto;margin:24px 0}table{border-collapse:collapse;width:100%;font-size:15px}th,td{text-align:left;vertical-align:top;border-bottom:1px solid var(--line);padding:10px 13px;min-width:100px}th{background:var(--soft)}blockquote{border-left:3px solid var(--line);padding-left:18px;margin-left:0}code{font-size:.9em}pre{padding:16px;background:#f4f6f8;overflow-x:auto;line-height:1.6}footer{border-top:1px solid var(--line);margin-top:35px;padding-bottom:40px}img{max-width:100%}:focus-visible{outline:3px solid #aa6300;outline-offset:4px}
+@media(max-width:600px){body{font-size:16px}header,main,footer{padding-left:18px;padding-right:18px}header{padding-top:22px}h2{font-size:22px;margin-top:34px}h3{font-size:19px}.abstract{padding:14px 16px}details{padding:12px}th,td{padding:8px;min-width:100px}}
+@media print{body{font-size:11pt}header,main,footer{max-width:none;padding:0}nav,.toc{display:none}h1,h2,h3{break-after:avoid}figure,table{break-inside:avoid}a{color:inherit}.table-scroll{overflow:visible}details{border:none}}
+</style>
+</head>
+<body>
+<header><p class="meta">@@META@@</p><h1>@@TITLE@@</h1></header>
+<main>@@BODY@@</main>
+<footer><a href="@@MARKDOWN@@">可编辑正文 / Editable Markdown</a></footer>
+</body>
+</html>
