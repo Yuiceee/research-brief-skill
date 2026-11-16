@@ -125,9 +125,8 @@ def render(source, output, lang, meta, expand_appendix=False):
         body.insert(0, toc)
     template = (Path(__file__).resolve().parents[1] / 'assets/report.html').read_text(encoding='utf-8')
     replacements = {'LANG': html.escape(lang, quote=True), 'TITLE': html.escape(title),
-                    'META': html.escape(meta), 'BODY': str(body),
-                    'MARKDOWN': html.escape(quote(os.path.relpath(source, output.parent), safe='/'), quote=True)}
-    result = re.sub(r'@@(LANG|TITLE|META|BODY|MARKDOWN)@@', lambda m: replacements[m.group(1)], template)
+                    'META': html.escape(meta), 'BODY': str(body)}
+    result = re.sub(r'@@(LANG|TITLE|META|BODY)@@', lambda m: replacements[m.group(1)], template)
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(result, encoding='utf-8')
     return {'title': title, 'figures': len(body.find_all('figure')), 'html': str(output)}

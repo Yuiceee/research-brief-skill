@@ -48,6 +48,18 @@ class RenderTests(unittest.TestCase):
             self.run_render('# 标题\n\n![测试](图.png)\n\n这不是图注。')
         self.assertFalse(self.output.exists())
 
+    def test_plain_report_does_not_gain_extra_sections_or_download_footer(self):
+        original = '# Test report\n\n## Background\n\nA question.\n\n## Results\n\n![Synthetic](图.png)\n\nFigure 1. Synthetic fixture.\n'
+        self.run_render(original)
+        soup = BeautifulSoup(self.output.read_text(), 'html.parser')
+        self.assertEqual([h.get_text() for h in soup.find_all('h2')], ['Background', 'Results'])
+        self.assertEqual(soup.main.find('h2').get_text(), 'Background')
+        self.assertFalse(soup.find('footer'))
+        self.assertFalse(soup.select('.abstract'))
+        self.assertEqual(len(soup.find_all('figure')), 1)
+        self.assertEqual(self.source.read_text(), original)
+        self.assertTrue(all(a['href'].startswith('#') for a in soup.find_all('a', href=True)))
+
     def test_missing_local_evidence_fails(self):
         with self.assertRaisesRegex(ValueError, 'Missing local file'):
             self.run_render('# 标题\n\n[材料](missing.csv)')

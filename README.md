@@ -2,7 +2,7 @@
 
 将研究资料整理成完整的图文报告，融合科研进展的解释深度与合作方沟通的可读性。
 
-开篇用摘要介绍背景、工作、发现与结论；正文围绕研究问题配图展开；材料核对和详细版本差异进入附录。保留主张与证据的对应关系，不把计算候选写成实验验证，不机械套用投稿论文结构。
+默认以简洁标题直接进入研究背景，正文围绕问题和结果配图展开，结论到位即止。不自动添加独立摘要、封面、延伸追问或来源章节；PDF 页脚只留页码。材料核对和来源追溯保存在独立工作底稿。不把计算候选写成实验验证，不机械套用投稿论文结构。
 
 ## 安装到本地 Codex
 
@@ -21,6 +21,6 @@
 - [HTML 生成与检查](skills/research-brief/references/html-delivery.md)：本地模板、生成工具和交付方法。
 - [设计来源](skills/research-brief/references/provenance.md)：参考思想与本 skill 的选择。
 
-使用生成工具需要 Python 3.9+，依赖见 `skills/research-brief/scripts/requirements.txt`。HTML 图片内嵌，无远程资源依赖；可编辑 Markdown 和证据附件仍需一并保留。
+使用生成工具需要 Python 3.9+，依赖见 `skills/research-brief/scripts/requirements.txt`。HTML 图片内嵌，无远程资源依赖；可编辑 Markdown 与配图一同保留，证据附件仅在用户要求时加入交付包。
 
 本仓库只收录通用 skill 与工具，不包含项目报告、研究数据或内部材料。
